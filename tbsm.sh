@@ -7,6 +7,7 @@ function tbsm() {
 	TBSM_HOST=""
 	TBSM_USER=""
 	TBSM_DIR="${TBSM_CUSTOM_DIR:-$HOME/.tbsm}"
+	TBSM_SSHKEY_DIR="${TBSM_CUSTOM_SSHKEY_DIR:-$HOME/.ssh}"
 	TBSM_HOSTS_FILENAME="$TBSM_DIR/ssh_hosts.json"
 
 	# Dépendances à vérifier et message générique d'installation
@@ -230,7 +231,7 @@ function tbsm() {
 		local host=$2
 
 		local filename=$(__tbsm_get_ssh_file $newuser $host)
-		local key_path="$HOME/.ssh/$filename"
+		local key_path="$TBSM_SSHKEY_DIR/$filename"
 
 		local title="SSH Key password"
 		local inputtext="Please enter a password for the SSH Key or leave empty"
@@ -299,7 +300,7 @@ function tbsm() {
 				select_host_exitcode=1
 				local params=()
 
-				local ssh_key_filename="$HOME/.ssh/$(__tbsm_get_ssh_file $TBSM_USER $TBSM_HOST)"
+				local ssh_key_filename="$TBSM_SSHKEY_DIR/$(__tbsm_get_ssh_file $TBSM_USER $TBSM_HOST)"
 				[ -f "$ssh_key_filename" ] && params+=(-i "$ssh_key_filename")
 				command ssh $params $TBSM_USER@$TBSM_HOST
 			else 

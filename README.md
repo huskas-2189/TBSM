@@ -35,6 +35,7 @@ You can configure the script with thoses variables :
 | Variables | Description | Default Value |
 | --- | --- | --- |
 | TBSM_CUSTOM_DIR | Specify the config directory | ~/.tbsm |
+| TBSM_CUSTOM_SSHKEY_DIR | SSH Key Directory | ~/.ssh |
 
 Example:
 ```bash
