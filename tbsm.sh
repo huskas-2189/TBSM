@@ -11,7 +11,7 @@ function tbsm() {
 	TBSM_HOSTS_FILENAME="$TBSM_DIR/ssh_hosts.json"
 
 	# Dépendances à vérifier et message générique d'installation
-	deps=(jq dialog)
+	deps=(jq dialog ssh-keygen)
 
 	####################################
 	## Function declaration

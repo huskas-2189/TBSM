@@ -10,6 +10,7 @@ A lightweight script to manage SSH targets. It stores server hostnames and assoc
 ## Requirements
 - **jq**: manage json configuration
 - **dialog**: display
+- **ssh-keygen**
 
 To install these packages:
 
@@ -19,12 +20,12 @@ sudo apt update && sudo apt install jq dialog
 
 ## Installation
 
-1. `curl -o ~/.tbsm/tbsm.sh https://github.com/huskas-2189/TBSM/tbsm.sh`
-2. `chmod +x ~/.tbsm/tbsm.sh`
-3. `ln -s ~/tbsm/tbsm.sh ~/.local/bin/tbsm`
+1. `mkdir ~/.tbsm`
+2. `curl -o ~/.tbsm/tbsm.sh https://github.com/huskas-2189/TBSM/tbsm.sh`
+3. `chmod +x ~/.tbsm/tbsm.sh`
+4. `ln -s ~/.tbsm/tbsm.sh ~/.local/bin/tbsm`
 
-if *~/.local/bin* doesn't exist : `mkdir ~/.local/bin`
-
+if *~/.local/bin* doesn't exist : `mkdir ~/.local/bin` and add it to your Path.
 
 Then, you can use it with `tbsm`
 
@@ -51,5 +52,4 @@ KISS it!! *(Keep it Simple, Stupid)*
 I wrote this bash script years ago in one evening, and I still use it every day. But because it just works, I haven’t touched it in years – it’s basically been left to gather dust in some hidden folder, and I almost forgot where it was. It was simple and did exactly what was asked of it, nothing more, nothing less.
 
 Keep it alive: fork it, modify it, but preserve this spirit of simplicity.
-
 
