@@ -18,10 +18,15 @@ To install these packages:
 sudo apt update && sudo apt install jq dialog
 ```
 
+For MacOS
+```bash
+brew install jq dialog
+```
+
 ## Installation
 
 1. `mkdir ~/.tbsm`
-2. `curl -o ~/.tbsm/tbsm.sh https://github.com/huskas-2189/TBSM/tbsm.sh`
+2. `curl -o ~/.tbsm/tbsm.sh https://codeberg.org/huskas-2189/tbsm/src/branch/main/tbsm.sh`
 3. `chmod +x ~/.tbsm/tbsm.sh`
 4. `ln -s ~/.tbsm/tbsm.sh ~/.local/bin/tbsm`
 
